@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
+import Highlights from './pages/Highlights';
 import './styles/App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/highlights" element={<Highlights />} />
         </Routes>
         <Footer />
       </div>

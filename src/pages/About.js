@@ -1,44 +1,38 @@
 import React from 'react';
 import '../styles/About.css';
 import Picture from '../assets/Picture.jpg';
-import { FaLightbulb, FaBriefcase, FaUsers } from 'react-icons/fa'; // Icons for business theme
+import { FaFootballBall, FaMedal, FaUsers } from 'react-icons/fa';
 
 const About = () => {
   return (
     <div className="about-section">
       <div className="about-content">
+        <img 
+          src={Picture}
+          alt="Coleman Strange" 
+          className="about-image" 
+        />
         <div className="about-text">
           <h2 className="about-title">About Me</h2>
           <p>
-            Hi, I'm Lucas Fedders, a driven leader and problem solver passionate about 
-            innovation and strategy. My journey began as a go-kart mechanic, where I honed 
-            troubleshooting and creative thinking skills. 
-          </p>
-          <p>
-            As a varsity soccer player and Young Life leader, I've developed leadership 
-            qualities and the ability to inspire and collaborate effectively. My goal is 
-            to drive meaningful impact in the business world through innovative solutions.
+            Hi, I'm Coleman Strange, a dedicated football player known for determination, teamwork, and a passion for the game. 
+            With years of experience on the field at Highlands High School, I strive to inspire those around me and excel in every opportunity I encounter.
           </p>
           <div className="about-icons">
             <div className="icon-item">
-              <FaLightbulb className="icon" />
-              <span>Problem Solver</span>
+              <FaFootballBall className="icon" />
+              <span>Player</span>
             </div>
             <div className="icon-item">
-              <FaBriefcase className="icon" />
-              <span>Strategic Thinker</span>
+              <FaMedal className="icon" />
+              <span>Achiever</span>
             </div>
             <div className="icon-item">
               <FaUsers className="icon" />
-              <span>Team Leader</span>
+              <span>Team Player</span>
             </div>
           </div>
         </div>
-        <img 
-          src={Picture}
-          alt="Lucas Fedders" 
-          className="about-image" 
-        />
       </div>
     </div>
   );

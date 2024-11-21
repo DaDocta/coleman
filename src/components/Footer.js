@@ -1,17 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>© 2024 Lucas Fedders | All Rights Reserved</p>
-        <div className="footer-links">
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </a>
-          <a href="mailto:lucasfedders@example.com">Email Me</a>
-        </div>
+        <div className="footer-logo">Coleman Strange</div>
+        <p className="footer-rights">© 2024 Coleman Strange | All Rights Reserved</p>
       </div>
     </footer>
   );

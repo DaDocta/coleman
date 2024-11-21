@@ -1,37 +1,45 @@
 import React from 'react';
-import '../styles/Contact.css';
+import '../styles/ContactForm.css';
 
 const ContactForm = () => {
   return (
     <form className="contact-form">
-      <div className="form-group">
-        <label htmlFor="name">Name</label>
+      <label htmlFor="name" className="form-label">
+        Name
         <input
           type="text"
           id="name"
+          name="name"
           className="form-control"
           placeholder="Enter your name"
+          required
         />
-      </div>
-      <div className="form-group">
-        <label htmlFor="email">Email</label>
+      </label>
+      <label htmlFor="email" className="form-label">
+        Email
         <input
           type="email"
           id="email"
+          name="email"
           className="form-control"
           placeholder="Enter your email"
+          required
         />
-      </div>
-      <div className="form-group">
-        <label htmlFor="message">Message</label>
+      </label>
+      <label htmlFor="message" className="form-label">
+        Message
         <textarea
           id="message"
+          name="message"
           className="form-control"
           placeholder="Enter your message"
           rows="5"
+          required
         ></textarea>
-      </div>
-      <button type="submit" className="submit-button">Send Message</button>
+      </label>
+      <button type="submit" className="submit-button">
+        Send Message
+      </button>
     </form>
   );
 };

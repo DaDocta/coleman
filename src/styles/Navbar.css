@@ -1,36 +1,110 @@
+/* Navbar Styling */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #333; /* Plain gray background */
-  color: #ff9800; /* Highlighted logo color */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: #2f68b0;
+  color: white;
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ff9800; /* Orange accent */
+  color: white;
+  text-transform: uppercase;
 }
 
+/* Navigation Links */
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 1.5rem;
+  list-style: none;
+  transition: transform 0.3s ease;
+}
+
+.nav-links li {
+  margin: 0;
 }
 
 .nav-links a {
-  color: white; /* White links to contrast the gray background */
   text-decoration: none;
-  font-size: 1rem;
+  color: white;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #E9C46A; /* Yellow hover color matching theme */
+  color: #2222ff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Active Hamburger Menu Animation */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Design */
+@media (orientation: portrait) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px; /* Adjust to match navbar height */
+    right: 0;
+    background-color: #2f68b0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-100%);
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links li {
+    padding: 10px
+  }
+}
+
+@media (orientation: landscape) {
+  .nav-links {
+    gap: 1.5rem;
+  }
 }
